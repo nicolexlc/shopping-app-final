@@ -2,6 +2,7 @@ import { CartState } from "../context/Context";
 import Filters from "./Filters";
 import SingleProduct from "./SingleProduct";
 import "./styles.css"
+import { Profile } from "./Profile";
 
 const Home = () => {
 
@@ -27,6 +28,7 @@ const Home = () => {
     };
 
     return <div className="home">
+        <Profile />
         <Filters />
         <div className="productContainer">
             {

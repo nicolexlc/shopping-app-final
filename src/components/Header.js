@@ -3,6 +3,8 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { AiFillDelete } from 'react-icons/ai';
 import { Link } from "react-router-dom";
 import { CartState } from "../context/Context";
+import { SigninButton } from "./Signin"
+import { LogoutButton } from "./Logout";
 
 const Header = () => {
 
@@ -77,9 +79,8 @@ const Header = () => {
                         </Dropdown.Menu>
                     </Dropdown>
                 </Nav>
-                <Link to="/Signin">
-                <Button variant="outline-success">Sign In</Button>
-                </Link>
+                <SigninButton />
+                <LogoutButton />
             </Container>
         </Navbar>
     )

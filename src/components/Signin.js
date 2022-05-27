@@ -1,26 +1,10 @@
-import {Form, Button} from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import { useAuth0 } from "@auth0/auth0-react";
 
-const Signin = () => {
+export const SigninButton = () => {
+  const { loginWithRedirect } = useAuth0();
 
-    return (
-        <div>
-            <Form style={{width:"80%", marginLeft:"10%", marginTop:"10%"}}>
-                <Form.Group >
-                    <Form.Label>Enter your email</Form.Label>
-                    <Form.Control type="email" placeholder="Enter your email" />
-                </Form.Group>
-                <Form.Group style={{ paddingBottom: 10}}>
-                    <Form.Label>Enter your password</Form.Label>
-                    <Form.Control type="password" placeholder="Enter your password" />
-                </Form.Group>
-                <Link to="/Home">
-                <Button type="submit">Submit</Button>
-                </Link>
-            </Form>
-        </div>
-    )
+  return <Button variant="outline-success" onClick={() => loginWithRedirect()}>Login</Button>;
 };
 
 
-export default Signin;
