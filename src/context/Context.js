@@ -3,6 +3,7 @@ import { faker } from '@faker-js/faker';
 import { cartReducer } from "./Reducers";
 
 const Cart = createContext();
+faker.seed(99);
 
 const Context =  ({ children }) => {
 
@@ -15,7 +16,7 @@ const Context =  ({ children }) => {
         inStock: faker.random.numeric(2),
     }));
 
-    //console.log(products);
+    console.log(products);
 
     const [state, dispatch] = useReducer(cartReducer, {
         products: products,
