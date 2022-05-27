@@ -25,6 +25,24 @@ export const productReducer= (state,action) => {
                 return {...state, byComputers: !state.byComputers};
             case "SHOW_AUTOMOTIVE":
                 return {...state, byAutomotive: !state.byAutomotive};   
+            case "SHOW_MOVIES":
+                return {...state, byMovies: !state.byMovies};
+            case "SHOW_HOME":
+                return {...state, byHome: !state.byHome};
+            case "SHOW_SPORTS":
+                return {...state, bySports: !state.bySports};
+            case "SHOW_OUTDOORS":
+                return {...state, byOutdoors: !state.byOutdoors};
+            case "SHOW_TOOLS":
+                return {...state, byTools: !state.byTools};
+            case "SHOW_BABY":
+                return {...state, byBaby: !state.byBaby};
+            case "SHOW_KIDS":
+                return {...state, byKids: !state.byKids};
+            case "SHOW_BOOKS":
+                return {...state, byBooks: !state.byBooks};
+            case "SHOW_BEAUTY":
+                return {...state, byBeauty: !state.byBeauty};
             case "FILTER_BY_SEARCH":
                 return {...state, searchQuery: action.payload };
             case "CLEAR_FILTERS":

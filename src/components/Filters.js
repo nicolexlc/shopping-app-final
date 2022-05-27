@@ -3,11 +3,12 @@ import { CartState } from "../context/Context";
 
 const Filters = () => {
 
-    const { productState: { byGarden, byToys, byGrocery, byMusic, byComputers, byAutomotive }, 
+    const { productState: { byGarden, byToys, byGrocery, byMusic, byComputers, byAutomotive, byMovies, byHome, bySports, byOutdoors,
+    byTools, byBaby, byKids, byBooks, byBeauty }, 
         productDispatch ,
     } = CartState();
 
-    console.log(byGarden);
+    // console.log(byGarden);
 
     return (
         <div className="filters">
@@ -106,6 +107,150 @@ const Filters = () => {
                         })
                     }
                     checked={byAutomotive}
+                />
+            </span>
+            <span>
+                <Form.Check
+                    inline
+                    label = "Movies"
+                    name="group1"
+                    type="checkbox"
+                    id={'inline-7'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_MOVIES",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={byMovies}
+                />
+            </span>
+            <span>
+                <Form.Check
+                    inline
+                    label = "Home"
+                    name="group1"
+                    type="checkbox"
+                    id={'inline-8'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_HOME",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={byHome}
+                />
+            </span>
+            <span>
+                <Form.Check
+                    inline
+                    label = "Sports"
+                    name="group1"
+                    type="checkbox"
+                    id={'inline-9'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_SPORTS",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={bySports}
+                />
+            </span>
+            <span>
+                <Form.Check
+                    inline
+                    label = "Outdoors"
+                    name="group1"
+                    type="checkbox"
+                    id={'inline-10'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_OUTDOORS",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={byOutdoors}
+                />
+            </span>
+            <span>
+                <Form.Check
+                    inline
+                    label = "Tools"
+                    name="group1"
+                    type="checkbox"
+                    id={'inline-11'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_TOOLS",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={byTools}
+                />
+            </span>
+            <span>
+                <Form.Check
+                    inline
+                    label = "Baby"
+                    name="group1"
+                    type="checkbox"
+                    id={'inline-12'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_BABY",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={byBaby}
+                />
+            </span>
+            <span>
+                <Form.Check
+                    inline
+                    label = "Kids"
+                    name="group1"
+                    type="checkbox"
+                    id={'inline-13'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_KIDS",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={byKids}
+                />
+            </span>
+            <span>
+                <Form.Check
+                    inline
+                    label = "Books"
+                    name="group1"
+                    type="checkbox"
+                    id={'inline-14'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_BOOKS",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={byBooks}
+                />
+            </span>
+            <span>
+                <Form.Check
+                    inline
+                    label = "Beauty"
+                    name="group1"
+                    type="checkbox"
+                    id={'inline-2'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_BEAUTY",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={byBeauty}
                 />
             </span>
             <Button 

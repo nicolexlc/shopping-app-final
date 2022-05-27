@@ -8,7 +8,8 @@ const Home = () => {
 
     const { 
         state: {products},
-        productState: { byGarden, searchQuery, byAutomotive, byComputers, byGrocery, byMusic, byToys },
+        productState: { byGarden, searchQuery, byAutomotive, byComputers, byGrocery, byMusic, byToys, byMovies, byHome, bySports,
+        byOutdoors, byTools, byBaby, byKids, byBooks, byBeauty },
     } = CartState();
 
     const transformProducts = () => {
@@ -57,6 +58,60 @@ const Home = () => {
         if (byAutomotive) {
             sortedProducts = sortedProducts.filter((prod) => 
                 prod.department.includes('Automotive')
+            );
+        }
+
+        if (byMovies) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Movies')
+            );
+        }
+
+        if (byHome) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Home')
+            );
+        }
+
+        if (bySports) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Sports')
+            );
+        }
+
+        if (byOutdoors) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Outdoors')
+            );
+        }
+
+        if (byTools) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Tools')
+            );
+        }
+
+        if (byBaby) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Baby')
+            );
+        }
+
+        if (byKids) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Kids')
+            );
+        }
+
+        if (byBooks) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Books')
+            );
+        }
+
+        if (byBeauty) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Beauty')
             );
         }
 

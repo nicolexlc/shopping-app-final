@@ -30,6 +30,15 @@ const Context =  ({ children }) => {
         byMusic: false,
         byComputers: false,
         byAutomotive: false,
+        byMovies: false,
+        byHome: false,
+        bySports: false,
+        byOutdoors: false,
+        byTools: false,
+        byBaby: false,
+        byKids: false,
+        byBooks: false,
+        byBeauty: false,
         searchQuery: "",
     });
 
