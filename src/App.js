@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
 import Cart from './components/Cart';
+import Payment from './components/Payment';
+
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path='Home' element={ <Home />}>
           </Route>
           <Route path='Cart' element={ <Cart />}>
+          </Route>
+          <Route path='Payment' element={ <Payment />}>
           </Route>
         </Routes>
       </div>
