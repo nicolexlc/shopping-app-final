@@ -5,15 +5,32 @@ import "./styles.css"
 
 const Home = () => {
 
-    const { state: {products} } = CartState();
+    const { 
+        state: {products},
+        productState: { byGarden, searchQuery },
+    } = CartState();
 
-    console.log(products);
+    const transformProducts = () => {
+        let sortedProducts = products;
+
+        // if(!byGarden) {
+        //    sortedProducts = sortedProducts.filter((prod) => prod.department('Garden'));
+        // }
+
+        if (searchQuery) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.name.toLowerCase().includes(searchQuery)
+            );
+        }
+    
+        return sortedProducts;
+    };
 
     return <div className="home">
         <Filters />
         <div className="productContainer">
             {
-                products.map((prod) => {
+                transformProducts().map((prod) => {
                    return <SingleProduct prod={prod} key={prod.id} />
                 })}
         </div>

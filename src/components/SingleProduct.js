@@ -43,4 +43,4 @@ const SingleProduct = ({ prod }) => {
     </div>;
 }
 
-export default SingleProduct
+export default SingleProduct;

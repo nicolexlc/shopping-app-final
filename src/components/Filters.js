@@ -1,6 +1,14 @@
 import { Button, Form } from "react-bootstrap";
+import { CartState } from "../context/Context";
 
 const Filters = () => {
+
+    const { productState: { byGarden, byToys, byGrocery, byMusic, byComputers, byAutomotive }, 
+        productDispatch ,
+    } = CartState();
+
+    console.log(byGarden);
+
     return (
         <div className="filters">
             <span className="title">Filter Products by Department</span>
@@ -11,6 +19,12 @@ const Filters = () => {
                     name="group1"
                     type="checkbox"
                     id={'inline-1'}
+                    onChange={() =>
+                        productDispatch({
+                            type: "SHOW_GARDEN",
+                        })
+                    }
+                    checked={byGarden}
                 />
             </span>
             <span>
@@ -58,7 +72,14 @@ const Filters = () => {
                     id={'inline-6'}
                 />
             </span>
-            <Button variant="info">Clear All Filters</Button>
+            <Button 
+                variant="info"
+                onClick={() =>
+                    productDispatch({
+                        type: "CLEAR_FILTERS",
+                    })
+                }
+            >Clear All Filters</Button>
         </div>
     );
 };

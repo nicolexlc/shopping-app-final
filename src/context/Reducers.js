@@ -10,3 +10,24 @@ export const cartReducer = (state, action) => {
             return state;
     }
 };
+
+export const productReducer= (state,action) => {
+        switch(action.type) {
+            case "SHOW_GARDEN":
+                return {...state, byGarden: !state.byGarden};
+            case "FILTER_BY_SEARCH":
+                return {...state, searchQuery: action.payload };
+            case "CLEAR_FILTERS":
+                return {
+                    byGarden: false,
+                    byToys: false,
+                    byGrocery: false,
+                    byMusic: false,
+                    byComputers: false,
+                    byAutomotive: false,
+                };
+            default:
+                return state;
+        }
+    }
+    
