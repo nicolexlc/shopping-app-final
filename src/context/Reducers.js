@@ -15,6 +15,16 @@ export const productReducer= (state,action) => {
         switch(action.type) {
             case "SHOW_GARDEN":
                 return {...state, byGarden: !state.byGarden};
+            case "SHOW_TOYS":
+                return {...state, byToys: !state.byToys};
+            case "SHOW_GROCERY":
+                return {...state, byGrocery: !state.byGrocery};
+            case "SHOW_MUSIC":
+                return {...state, byMusic: !state.byMusic};
+            case "SHOW_COMPUTERS":
+                return {...state, byComputers: !state.byComputers};
+            case "SHOW_AUTOMOTIVE":
+                return {...state, byAutomotive: !state.byAutomotive};   
             case "FILTER_BY_SEARCH":
                 return {...state, searchQuery: action.payload };
             case "CLEAR_FILTERS":

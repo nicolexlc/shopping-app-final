@@ -8,7 +8,7 @@ const Home = () => {
 
     const { 
         state: {products},
-        productState: { byGarden, searchQuery },
+        productState: { byGarden, searchQuery, byAutomotive, byComputers, byGrocery, byMusic, byToys },
     } = CartState();
 
     const transformProducts = () => {
@@ -18,12 +18,48 @@ const Home = () => {
         //    sortedProducts = sortedProducts.filter((prod) => prod.department('Garden'));
         // }
 
+        if (byGarden) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Garden')
+            );
+        }
+
         if (searchQuery) {
             sortedProducts = sortedProducts.filter((prod) => 
                 prod.name.toLowerCase().includes(searchQuery)
             );
         }
-    
+        
+        if (byToys) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Toys')
+            );
+        }
+
+        if (byGrocery) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Grocery')
+            );
+        }
+
+        if (byMusic) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Music')
+            );
+        }
+
+        if (byComputers) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Computers')
+            );
+        }
+
+        if (byAutomotive) {
+            sortedProducts = sortedProducts.filter((prod) => 
+                prod.department.includes('Automotive')
+            );
+        }
+
         return sortedProducts;
     };
 

@@ -19,9 +19,10 @@ const Filters = () => {
                     name="group1"
                     type="checkbox"
                     id={'inline-1'}
-                    onChange={() =>
+                    onChange={(e) =>
                         productDispatch({
                             type: "SHOW_GARDEN",
+                            payload: e.target.value,
                         })
                     }
                     checked={byGarden}
@@ -34,6 +35,13 @@ const Filters = () => {
                     name="group1"
                     type="checkbox"
                     id={'inline-2'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_TOYS",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={byToys}
                 />
             </span>
             <span>
@@ -43,6 +51,13 @@ const Filters = () => {
                     name="group1"
                     type="checkbox"
                     id={'inline-3'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_GROCERY",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={byGrocery}
                 />
             </span>
             <span>
@@ -52,6 +67,13 @@ const Filters = () => {
                     name="group1"
                     type="checkbox"
                     id={'inline-4'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_MUSIC",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={byMusic}
                 />
             </span>
             <span>
@@ -61,6 +83,13 @@ const Filters = () => {
                     name="group1"
                     type="checkbox"
                     id={'inline-5'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_COMPUTERS",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={byComputers}
                 />
             </span>
             <span>
@@ -70,6 +99,13 @@ const Filters = () => {
                     name="group1"
                     type="checkbox"
                     id={'inline-6'}
+                    onChange={(e) =>
+                        productDispatch({
+                            type: "SHOW_AUTOMOTIVE",
+                            payload: e.target.value,
+                        })
+                    }
+                    checked={byAutomotive}
                 />
             </span>
             <Button 
