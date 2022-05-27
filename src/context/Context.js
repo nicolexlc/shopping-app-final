@@ -7,7 +7,7 @@ faker.seed(99);
 
 const Context =  ({ children }) => {
 
-    const products = [...Array(20)].map(() => ({
+    const products = [...Array(21)].map(() => ({
         id: faker.datatype.uuid(),
         name: faker.commerce.productName(),        
         department: faker.commerce.department(),

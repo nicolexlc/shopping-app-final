@@ -77,6 +77,9 @@ const Header = () => {
                         </Dropdown.Menu>
                     </Dropdown>
                 </Nav>
+                <Link to="/Signin">
+                <Button variant="outline-success">Sign In</Button>
+                </Link>
             </Container>
         </Navbar>
     )
